@@ -97,7 +97,6 @@ const config = {
       '@root': path.resolve(__dirname, './src'),
       '@api': path.resolve(__dirname, './src/api'),
       '@store': path.resolve(__dirname, './src/store'),
-      '@colors': path.resolve(__dirname, './src/assets/styles/colors.scss'),
     },
   },
   plugins: getPlugins(),

@@ -1,18 +1,32 @@
 import React from 'react';
 import { Switch, Redirect, Route } from 'react-router-dom';
+import s from 'styled-components';
 
-import Main from '../Pages/Main';
+import Nav from '@root/components/Helpers/Nav';
+import Buttons from '../Pages/Buttons';
 
-import s from './styles.scss';
+const AppStyled = s.div`
+  display: flex;
+`;
+
+const ContainerStyled = s.div`
+  width: 100%;
+  height: 100vh;
+  overflow-y: auto;
+  padding: 20px;
+`;
 
 const App: React.FC = () => {
   return (
-    <div className={s.app}>
-      <Switch>
-        <Route path="/" component={Main} />
-        <Redirect to="/" />
-      </Switch>
-    </div>
+    <AppStyled>
+      <Nav />
+      <ContainerStyled>
+        <Switch>
+          <Route path="/buttons" component={Buttons} />
+          <Redirect to="/buttons" />
+        </Switch>
+      </ContainerStyled>
+    </AppStyled>
   );
 };
 
