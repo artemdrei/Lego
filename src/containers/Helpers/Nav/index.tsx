@@ -22,7 +22,8 @@ const Nav: React.FC = () => {
   return (
     <NavStyled>
       <LinkStyled>
-        <Link to="buttons">Buttons</Link>
+        <Link to="/buttons">Buttons</Link>
+        <Link to="/typography">Typography</Link>
       </LinkStyled>
     </NavStyled>
   );

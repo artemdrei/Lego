@@ -2,8 +2,9 @@ import React from 'react';
 import { Switch, Redirect, Route } from 'react-router-dom';
 import s from 'styled-components';
 
-import Nav from '@root/components/Helpers/Nav';
+import Nav from '@root/containers/Helpers/Nav';
 import Buttons from '../Pages/Buttons';
+import Typography from '../Pages/Typography';
 
 const AppStyled = s.div`
   display: flex;
@@ -23,6 +24,7 @@ const App: React.FC = () => {
       <ContainerStyled>
         <Switch>
           <Route path="/buttons" component={Buttons} />
+          <Route path="/typography" component={Typography} />
           <Redirect to="/buttons" />
         </Switch>
       </ContainerStyled>

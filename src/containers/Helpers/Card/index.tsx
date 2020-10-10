@@ -5,6 +5,7 @@ const CardStyled = s.div`
   padding: 12px 20px;
   border: 1px solid var(--faint-weak);
   border-radius: 4px;
+  margin-bottom: 24px;
 `;
 
 const Card: React.FC = ({ children }) => {

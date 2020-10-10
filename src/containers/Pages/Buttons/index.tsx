@@ -1,14 +1,16 @@
 import React from 'react';
 
-import Container from '@root/components/Helpers/Container';
-import Card from '@root/components/Helpers/Card';
+import Container from '@root/containers/Helpers/Container';
+import Card from '@root/containers/Helpers/Card';
 import Button from '@root/components/Button';
 
 import TrashIcon from '@root/assets/svg/trash.svg';
+import Text from '@root/components/Typography';
 
 const Buttons: React.FC = () => {
   return (
     <Container>
+      <Text tag="h1">Lorem</Text>
       <Card>
         <Button color="primary">Primary</Button>
         <Button color="secondary">Secondary</Button>
