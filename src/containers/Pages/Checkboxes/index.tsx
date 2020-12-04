@@ -21,7 +21,7 @@ const Checkboxes: React.FC = () => {
 
   return (
     <Container>
-      <Text tag="h1" variant="h1">
+      <Text tag="h1" variant="h2">
         Checkboxes
       </Text>
       <Text tag="h1" variant="h5">
@@ -29,30 +29,21 @@ const Checkboxes: React.FC = () => {
       </Text>
       <Card>
         <Checkbox name="one" value="value 1" />
-        <Checkbox name="two" value="value 2" />
-        <Checkbox name="tree" value="value 3" />
-        <Checkbox name="four" value="value 4" disabled />
+        <Checkbox name="two" value="value 2" disabled />
       </Card>
 
       <Text tag="h1" variant="h5">
         Controlled
       </Text>
       <Card>
-        <Checkbox name="one" label="Second" value="value 1" checked={state.one} onChange={onChange} />
-        <Checkbox name="two" label="Third" value="value 2" checked={state.two} onChange={onChange} />
+        <Checkbox name="one" label="One" value="value 1" checked={state.one} onChange={onChange} />
+        <Checkbox name="two" label="Two" value="value 2" checked={state.two} onChange={onChange} />
+
         <Checkbox
           name="tree"
-          label="First"
+          label="Tree"
           value="value 3"
-          disabled
           checked={state.tree}
-          onChange={onChange}
-        />
-        <Checkbox
-          name="four"
-          label="Fourth"
-          value="value 4"
-          checked={state.four}
           disabled
           onChange={onChange}
         />

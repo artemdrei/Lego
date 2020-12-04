@@ -141,6 +141,7 @@ const getColor = ({ color = 'primary', variant = 'regular', size = 'medium' }: I
     font-size: 1rem;
     
     svg {
+      margin-top: 0;
       margin-right: 0;
     }
 

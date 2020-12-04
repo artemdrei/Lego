@@ -8,7 +8,7 @@ import Text from '@root/components/Typography';
 const Buttons: React.FC = () => {
   return (
     <Container>
-      <Text tag="h1" variant="h1">
+      <Text tag="h1" variant="h2">
         Headings
       </Text>
       <Card>

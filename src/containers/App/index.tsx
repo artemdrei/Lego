@@ -13,7 +13,7 @@ const AppStyled = s.div`
   display: flex;
 `;
 
-const ContainerStyled = s.div`
+const ContentStyled = s.div`
   width: 100%;
   height: 100vh;
   overflow-y: auto;
@@ -24,14 +24,14 @@ const App: React.FC = () => {
   return (
     <AppStyled>
       <Nav />
-      <ContainerStyled>
+      <ContentStyled>
         <Switch>
           <Route path={ROUTE.BUTTONS} component={Buttons} />
           <Route path={ROUTE.TYPOGRAPHY} component={Typography} />
           <Route path={ROUTE.CHECKBOXES} component={Checkboxes} />
           <Redirect to={ROUTE.BUTTONS} />
         </Switch>
-      </ContainerStyled>
+      </ContentStyled>
     </AppStyled>
   );
 };
