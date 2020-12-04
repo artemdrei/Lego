@@ -8,6 +8,7 @@ import Nav from '@root/containers/Helpers/Nav';
 import Buttons from '../Pages/Buttons';
 import Typography from '../Pages/Typography';
 import Checkboxes from '../Pages/Checkboxes';
+import RadioButtons from '../Pages/RadioButtons';
 
 const AppStyled = s.div`
   display: flex;
@@ -29,6 +30,7 @@ const App: React.FC = () => {
           <Route path={ROUTE.BUTTONS} component={Buttons} />
           <Route path={ROUTE.TYPOGRAPHY} component={Typography} />
           <Route path={ROUTE.CHECKBOXES} component={Checkboxes} />
+          <Route path={ROUTE.RADIO_BUTTONS} component={RadioButtons} />
           <Redirect to={ROUTE.BUTTONS} />
         </Switch>
       </ContentStyled>
