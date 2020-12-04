@@ -5,6 +5,7 @@ import s from 'styled-components';
 import Nav from '@root/containers/Helpers/Nav';
 import Buttons from '../Pages/Buttons';
 import Typography from '../Pages/Typography';
+import Checkboxes from '../Pages/Checkboxes';
 
 const AppStyled = s.div`
   display: flex;
@@ -25,6 +26,7 @@ const App: React.FC = () => {
         <Switch>
           <Route path="/buttons" component={Buttons} />
           <Route path="/typography" component={Typography} />
+          <Route path="/checkboxes" component={Checkboxes} />
           <Redirect to="/buttons" />
         </Switch>
       </ContainerStyled>
