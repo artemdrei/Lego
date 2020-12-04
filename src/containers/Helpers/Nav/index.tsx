@@ -1,5 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+
+import { ROUTE } from '@root/constants/routes';
+
 import s from 'styled-components';
 
 const NavStyled = s.nav`
@@ -22,9 +25,9 @@ const Nav: React.FC = () => {
   return (
     <NavStyled>
       <LinkStyled>
-        <Link to="/buttons">Buttons</Link>
-        <Link to="/typography">Typography</Link>
-        <Link to="/checkboxes">Checkboxes</Link>
+        <Link to={ROUTE.BUTTONS}>Buttons</Link>
+        <Link to={ROUTE.TYPOGRAPHY}>Typography</Link>
+        <Link to={ROUTE.CHECKBOXES}>Checkboxes</Link>
       </LinkStyled>
     </NavStyled>
   );

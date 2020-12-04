@@ -2,7 +2,7 @@ import React from 'react';
 import s from 'styled-components';
 
 const CardStyled = s.div`
-  padding: 12px 20px;
+  padding: 20px 24px;
   border: 1px solid var(--faint-weak);
   border-radius: 4px;
   margin-bottom: 24px;
