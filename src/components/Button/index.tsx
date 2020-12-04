@@ -173,7 +173,7 @@ const getSize = ({ size = 'medium', variant }: IProps) => {
 };
 
 const ButtonStyled = styled('button')<IProps>`
-  ${s},
+  ${s};
   ${base};
   ${getSize};
   ${getColor};

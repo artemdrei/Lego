@@ -23,20 +23,31 @@ const fontSize = {
 };
 
 const fontWeight = {
-  h1: 700,
-  h2: 700,
-  h3: 700,
-  h4: 700,
-  h5: 700,
-  h6: 700,
+  h1: 600,
+  h2: 600,
+  h3: 600,
+  h4: 600,
+  h5: 600,
+  h6: 600,
   subtitle: 600,
   body: 400,
 };
 
 const Text: React.FC<IProps> = (props) => {
-  const { variant = 'body', tag, marginTop, marginBottom, children, align, noWrap, color } = props;
+  const {
+    variant = 'body',
+    tag,
+    marginTop,
+    marginBottom,
+    children,
+    align,
+    noWrap,
+    color = 'var(--font-accent)',
+  } = props;
   const dynamicTag = tag ? tag : variant === 'subtitle' || variant === 'body' ? 'p' : variant;
-  const cutText = noWrap ? { 'text-overflow': 'ellipsis', 'white-space': 'nowrap', overflow: 'hidden' } : {};
+  const cutText = noWrap
+    ? { 'text-overflow': 'ellipsis', 'white-space': 'nowrap', overflow: 'hidden' }
+    : null;
   const mTop =
     marginTop || marginTop === 0
       ? marginTop / CONFIG.FONT_SIZE

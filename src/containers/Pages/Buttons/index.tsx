@@ -10,22 +10,36 @@ import Text from '@root/components/Typography';
 const Buttons: React.FC = () => {
   return (
     <Container>
-      <Text tag="h1">Lorem</Text>
+      <Text tag="h1" variant="h1">
+        Buttons
+      </Text>
+      <Text tag="h2" variant="h5">
+        Contained Buttons
+      </Text>
       <Card>
         <Button color="primary">Primary</Button>
         <Button color="secondary">Secondary</Button>
         <Button color="danger">Danger</Button>
       </Card>
+      <Text tag="h2" variant="h5">
+        Outlined Buttons
+      </Text>
       <Card>
         <Button color="primary" variant="outline" label="Outline Primary" />
         <Button color="secondary" variant="outline" label="Outline Secondary" />
         <Button color="danger" variant="outline" label="Outline Danger" />
       </Card>
+      <Text tag="h2" variant="h5">
+        Link like Buttons
+      </Text>
       <Card>
         <Button color="primary" variant="link" label="Link View Primary" />
         <Button color="secondary" variant="link" label="Link View Secondary" />
         <Button color="danger" variant="link" label="Link View Danger" />
       </Card>
+      <Text tag="h2" variant="h5">
+        Links
+      </Text>
       <Card>
         <Button
           href="https://www.wikipedia.org/"
@@ -49,6 +63,9 @@ const Buttons: React.FC = () => {
           target="_blank"
         />
       </Card>
+      <Text tag="h2" variant="h5">
+        Buttons with Icon
+      </Text>
       <Card>
         <Button color="primary" label="Outline Primary">
           <TrashIcon />
@@ -60,6 +77,9 @@ const Buttons: React.FC = () => {
           <TrashIcon />
         </Button>
       </Card>
+      <Text tag="h2" variant="h5">
+        Icon Buttons
+      </Text>
       <Card>
         <Button color="primary" variant="icon" size="small" aria-label="delete">
           <TrashIcon />
@@ -71,6 +91,9 @@ const Buttons: React.FC = () => {
           <TrashIcon />
         </Button>
       </Card>
+      <Text tag="h2" variant="h5">
+        Disabled Buttons
+      </Text>
       <Card>
         <Button color="primary" disabled label="Primary" />
         <Button color="danger" disabled variant="outline" label="Outline Secondary" />
@@ -83,7 +106,9 @@ const Buttons: React.FC = () => {
           label="Link Outline"
         />
       </Card>
-      ## Sizes
+      <Text tag="h2" variant="h5">
+        Sizes
+      </Text>
       <Card>
         <Button size="small">Small</Button>
         <Button size="medium">Medium</Button>
