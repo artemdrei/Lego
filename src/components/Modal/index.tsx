@@ -16,7 +16,7 @@ const Wrapper = s.div<Partial<IProps>>`
   justify-content: center;
   width: 100%;
   height: 100%;
-  z-index; var(--modal-z-index);
+  z-index; 100;
   background-color: rgba(0, 0, 0, 0.36);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   opacity: ${({ opened }) => (opened ? 1 : 0)};
