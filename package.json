@@ -6,8 +6,12 @@
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack-dev-server --mode development --watch",
     "build": "cross-env NODE_ENV=production webpack --mode production",
+    "eslint": "eslint '*/**/*.{js,ts,tsx}'",
+    "tslint:watch": "tsc --skipLibCheck --allowJs --watch",
+    "test": "jest",
+    "test:watch": "jest --watch --verbose false",
     "stats": "webpack --json > stats.json && webpack-bundle-analyzer stats.json",
-    "lint": "eslint '*/**/*.{js,ts,tsx}'"
+    "svg:optimize": "find ./src/assets/svg -type f -name '*.svg' -print0 | xargs -0 -n 1 -P 6 svgo"
   },
   "browserslist": "> 1%, not dead",
   "repository": {
@@ -40,6 +44,7 @@
     "cross-env": "^7.0.2",
     "css-loader": "^3.5.2",
     "eslint": "^7.10.0",
+    "eslint-plugin-no-loops": "^0.3.0",
     "file-loader": "^6.0.0",
     "html-webpack-plugin": "^4.2.0",
     "mini-css-extract-plugin": "^0.9.0",
