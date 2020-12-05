@@ -3,4 +3,5 @@ export const ROUTE = {
   TYPOGRAPHY: '/typography',
   CHECKBOXES: '/checkboxes',
   RADIO_BUTTONS: '/radio-buttons',
+  MODALS: '/modals',
 };

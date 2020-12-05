@@ -5,7 +5,7 @@ export type IProps = {
   align?: 'inherit' | 'left' | 'center' | 'right' | 'justify';
   marginTop?: number; //px
   marginBottom?: number; //px
-  noWrap?: boolean;
+  cutText?: boolean;
   color?: string;
   // classes?: Record<string, unknown>; TODO
 };

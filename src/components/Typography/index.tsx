@@ -41,11 +41,11 @@ const Text: React.FC<IProps> = (props) => {
     marginBottom,
     children,
     align,
-    noWrap,
+    cutText,
     color = 'var(--font-accent)',
   } = props;
   const dynamicTag = tag ? tag : variant === 'subtitle' || variant === 'body' ? 'p' : variant;
-  const cutText = noWrap
+  const noWrap = cutText
     ? { 'text-overflow': 'ellipsis', 'white-space': 'nowrap', overflow: 'hidden' }
     : null;
   const mTop =
@@ -64,7 +64,7 @@ const Text: React.FC<IProps> = (props) => {
     font-weight: ${fontWeight[variant]};
     text-align: ${align};
     color: ${color};
-    ${cutText}
+    ${noWrap}
 `;
 
   return <Styled>{children}</Styled>;

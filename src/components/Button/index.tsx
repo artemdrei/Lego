@@ -69,6 +69,10 @@ const getColor = ({ color = 'primary', variant = 'regular', size = 'medium' }: I
       opacity: ${button.disabled.opacity}
     }
 
+    &:hover {
+      cursor: pointer;
+    }
+
     &:hover:disabled {
       cursor: not-allowed;
     }
@@ -77,6 +81,7 @@ const getColor = ({ color = 'primary', variant = 'regular', size = 'medium' }: I
   const regularFontColor = isSecondary ? 'var(--button-color)' : 'var(--button-color-weak)';
   const hoverBg = isSecondary ? btnColor.replace(')', '-down)') : btnColor.replace(')', '-up)');
   const activeBg = isSecondary ? btnColor.replace(')', '-up)') : btnColor.replace(')', '-down)');
+  const activeIconBg = isSecondary ? btnColor.replace(')', '-up)') : btnColor.replace(')', '-weak-down)');
   const regularStyles = `
     color: ${regularFontColor};
     background-color: ${btnColor};
@@ -138,7 +143,6 @@ const getColor = ({ color = 'primary', variant = 'regular', size = 'medium' }: I
     background-color: transparent;
     border: 1px solid transparent;
     line-height: 1;
-    font-size: 1rem;
     
     svg {
       margin-top: 0;
@@ -151,6 +155,10 @@ const getColor = ({ color = 'primary', variant = 'regular', size = 'medium' }: I
 
     &:hover:enabled {
       border: 1px solid  ${isSecondary ? 'var(--faint)' : btnColor};
+    }
+
+    &:active:enabled {
+      background-color: ${activeIconBg};
     }
   `;
 

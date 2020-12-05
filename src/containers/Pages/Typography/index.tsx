@@ -26,7 +26,7 @@ const Buttons: React.FC = () => {
         Typography with props
       </Text>
       <Card>
-        <Text noWrap color="var(--font)">
+        <Text cutText color="var(--font)">
           Cut text with "..." Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium minima
           facere cumque quas voluptatum est totam ipsum unde! Recusandae magnam laboriosam dolor pariatur esse
           totam illum veritatis tenetur est nesciunt!
