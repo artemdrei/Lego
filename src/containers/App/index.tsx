@@ -10,6 +10,7 @@ import Typography from '../Pages/Typography';
 import Checkboxes from '../Pages/Checkboxes';
 import RadioButtons from '../Pages/RadioButtons';
 import Modals from '../Pages/Modals';
+import Select from '../Pages/Select';
 
 const AppStyled = s.div`
   display: flex;
@@ -33,6 +34,7 @@ const App: React.FC = () => {
           <Route path={ROUTE.CHECKBOXES} component={Checkboxes} />
           <Route path={ROUTE.RADIO_BUTTONS} component={RadioButtons} />
           <Route path={ROUTE.MODALS} component={Modals} />
+          <Route path={ROUTE.SELECTS} component={Select} />
           <Redirect to={ROUTE.BUTTONS} />
         </Switch>
       </ContentStyled>

@@ -36,6 +36,7 @@ const Nav: React.FC = () => {
         <Link to={ROUTE.CHECKBOXES}>Checkboxes</Link>
         <Link to={ROUTE.RADIO_BUTTONS}>Radio Buttons</Link>
         <Link to={ROUTE.MODALS}>Modals</Link>
+        <Link to={ROUTE.SELECTS}>Selects</Link>
       </LinkStyled>
     </NavStyled>
   );
