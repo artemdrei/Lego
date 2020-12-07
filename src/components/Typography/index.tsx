@@ -34,8 +34,8 @@ const fontWeight = {
 };
 
 const Typography = s.div<any>`
-  ${(props) => (props.mTop ? `margin-top: ${props.mTop}rem` : null)};
-  ${(props) => (props.mBottom ? `margin-bottom: ${props.mBottom}rem` : null)};
+  ${(props) => `margin-top: ${props.mTop}rem`};
+  ${(props) => `margin-bottom: ${props.mBottom}rem`};
   font-size: ${(props) => props.fSize}rem;
   font-weight: ${(props) => props.fWeight};
   text-align: ${(props) => props.align};
@@ -56,18 +56,21 @@ const Text: React.FC<IProps> = (props) => {
   } = props;
 
   const as = tag ? tag : variant === 'subtitle' ? 'p' : variant === 'body' ? 'div' : variant;
+  console.log('variant:', variant);
 
   const mTop =
-    variant === 'body'
+    variant === 'body' || marginTop === 0
       ? 0
-      : marginTop || marginTop === 0
+      : marginTop
       ? marginTop / CONFIG.FONT_SIZE
       : (+fontSize[variant] * CONFIG.MARGIN.TOP).toFixed(1);
 
+  console.log('mTop:', mTop);
+
   const mBottom =
-    variant === 'body'
+    variant === 'body' || marginBottom === 0
       ? 0
-      : marginBottom || marginBottom === 0
+      : marginBottom
       ? marginBottom / CONFIG.FONT_SIZE
       : (+fontSize[variant] * CONFIG.MARGIN.BOTTOM).toFixed(1);
 

@@ -39,9 +39,9 @@ const Checkboxes: React.FC = () => {
           />
           <Select
             disabled
-            data={[]}
+            data={languages}
             name="languages"
-            value={'eng'}
+            value={'en'}
             ariaLabel="Select language"
             onChange={() => {}}
           />
