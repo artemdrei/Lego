@@ -38,6 +38,7 @@ const Nav: React.FC = () => {
         <Link to={ROUTE.MODALS}>Modals</Link>
         <Link to={ROUTE.SELECTS}>Selects</Link>
         <Link to={ROUTE.ALERTS}>Alerts</Link>
+        <Link to={ROUTE.LOADERS}>Loaders</Link>
       </LinkStyled>
     </NavStyled>
   );

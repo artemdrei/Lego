@@ -30,6 +30,7 @@ const AlertStyled = s.div<Partial<IAlertStyled>>`{
   margin-bottom: 12px;
   border-radius: 4px;
   color: #fff;
+  
   animation: ${(props) =>
     props.closed
       ? css`

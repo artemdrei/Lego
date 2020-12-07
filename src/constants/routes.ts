@@ -6,4 +6,5 @@ export const ROUTE = {
   MODALS: '/modals',
   SELECTS: '/selects',
   ALERTS: '/alerts',
+  LOADERS: '/loaders',
 };
