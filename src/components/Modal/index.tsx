@@ -3,6 +3,8 @@ import s from 'styled-components';
 
 import { IProps } from './types';
 
+import { Z_INDEX } from '@root/constants/zIndexes';
+
 import Footer from './Footer';
 import Body from './Body';
 import Header from './Header';
@@ -16,7 +18,7 @@ const Wrapper = s.div<Partial<IProps>>`
   justify-content: center;
   width: 100%;
   height: 100%;
-  z-index; 100;
+  z-index: ${Z_INDEX.MODAL};
   background-color: rgba(0, 0, 0, 0.36);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   opacity: ${({ opened }) => (opened ? 1 : 0)};

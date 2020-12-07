@@ -11,6 +11,7 @@ import Checkboxes from '../Pages/Checkboxes';
 import RadioButtons from '../Pages/RadioButtons';
 import Modals from '../Pages/Modals';
 import Select from '../Pages/Select';
+import Alerts from '../Pages/Alerts';
 
 const AppStyled = s.div`
   display: flex;
@@ -35,6 +36,7 @@ const App: React.FC = () => {
           <Route path={ROUTE.RADIO_BUTTONS} component={RadioButtons} />
           <Route path={ROUTE.MODALS} component={Modals} />
           <Route path={ROUTE.SELECTS} component={Select} />
+          <Route path={ROUTE.ALERTS} component={Alerts} />
           <Redirect to={ROUTE.BUTTONS} />
         </Switch>
       </ContentStyled>

@@ -5,4 +5,5 @@ export const ROUTE = {
   RADIO_BUTTONS: '/radio-buttons',
   MODALS: '/modals',
   SELECTS: '/selects',
+  ALERTS: '/alerts',
 };
