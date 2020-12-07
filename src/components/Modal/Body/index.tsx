@@ -4,7 +4,7 @@ import s from 'styled-components';
 import { IProps } from './types';
 
 const BodyWrapper = s.div`
-  padding: 32px;
+  padding: 24px;
   color: var(--font);
   overflow: auto;
 `;

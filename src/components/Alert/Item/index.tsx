@@ -87,11 +87,7 @@ const Alert: React.FC<IAlertStyled> = (props) => {
             {title}
           </Typography>
         )}
-        {body && (
-          <Typography marginTop={0} marginBottom={0} color="#fff">
-            {body}
-          </Typography>
-        )}
+        {body && <Typography color="#fff">{body}</Typography>}
         {children}
       </div>
       <Button variant="icon" onClick={onClose}>

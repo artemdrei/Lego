@@ -33,6 +33,16 @@ const fontWeight = {
   body: 400,
 };
 
+const Typography = s.div<any>`
+  ${(props) => (props.mTop ? `margin-top: ${props.mTop}rem` : null)};
+  ${(props) => (props.mBottom ? `margin-bottom: ${props.mBottom}rem` : null)};
+  font-size: ${(props) => props.fSize}rem;
+  font-weight: ${(props) => props.fWeight};
+  text-align: ${(props) => props.align};
+  color: ${(props) => props.fColor};
+  ${(props) => props.noWrap}
+`;
+
 const Text: React.FC<IProps> = (props) => {
   const {
     variant = 'body',
@@ -42,32 +52,43 @@ const Text: React.FC<IProps> = (props) => {
     children,
     align,
     cutText,
-    color = 'var(--font-accent)',
+    color = 'var(--font)',
   } = props;
-  const dynamicTag = tag ? tag : variant === 'subtitle' || variant === 'body' ? 'p' : variant;
-  const noWrap = cutText
-    ? { 'text-overflow': 'ellipsis', 'white-space': 'nowrap', overflow: 'hidden' }
-    : null;
+
+  const as = tag ? tag : variant === 'subtitle' ? 'p' : variant === 'body' ? 'div' : variant;
+
   const mTop =
-    marginTop || marginTop === 0
+    variant === 'body'
+      ? 0
+      : marginTop || marginTop === 0
       ? marginTop / CONFIG.FONT_SIZE
       : (+fontSize[variant] * CONFIG.MARGIN.TOP).toFixed(1);
+
   const mBottom =
-    marginBottom || marginBottom === 0
+    variant === 'body'
+      ? 0
+      : marginBottom || marginBottom === 0
       ? marginBottom / CONFIG.FONT_SIZE
       : (+fontSize[variant] * CONFIG.MARGIN.BOTTOM).toFixed(1);
 
-  const Styled = s(dynamicTag)`
-    margin-top: ${mTop}rem;
-    margin-bottom: ${mBottom}rem;
-    font-size: ${fontSize[variant]}rem;
-    font-weight: ${fontWeight[variant]};
-    text-align: ${align};
-    color: ${color};
-    ${noWrap}
-`;
+  const noWrap = cutText
+    ? { 'text-overflow': 'ellipsis', 'white-space': 'nowrap', overflow: 'hidden' }
+    : null;
 
-  return <Styled>{children}</Styled>;
+  return (
+    <Typography
+      as={as}
+      mTop={mTop}
+      mBottom={mBottom}
+      fSize={fontSize[variant]}
+      fWeight={fontWeight[variant]}
+      align={align}
+      fColor={color}
+      noWrap={noWrap}
+    >
+      {children}
+    </Typography>
+  );
 };
 
 export default Text;
