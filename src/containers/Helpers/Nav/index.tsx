@@ -39,6 +39,7 @@ const Nav: React.FC = () => {
         <Link to={ROUTE.SELECTS}>Selects</Link>
         <Link to={ROUTE.ALERTS}>Alerts</Link>
         <Link to={ROUTE.LOADERS}>Loaders</Link>
+        <Link to={ROUTE.INPUTS}>Inputs</Link>
       </LinkStyled>
     </NavStyled>
   );

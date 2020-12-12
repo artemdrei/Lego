@@ -13,6 +13,7 @@ import Modals from '../Pages/Modals';
 import Select from '../Pages/Select';
 import Alerts from '../Pages/Alerts';
 import Loaders from '../Pages/Loaders';
+import Inputs from '../Pages/Inputs';
 
 const AppStyled = s.div`
   display: flex;
@@ -39,6 +40,7 @@ const App: React.FC = () => {
           <Route path={ROUTE.SELECTS} component={Select} />
           <Route path={ROUTE.ALERTS} component={Alerts} />
           <Route path={ROUTE.LOADERS} component={Loaders} />
+          <Route path={ROUTE.INPUTS} component={Inputs} />
           <Redirect to={ROUTE.BUTTONS} />
         </Switch>
       </ContentStyled>

@@ -56,7 +56,6 @@ const Text: React.FC<IProps> = (props) => {
   } = props;
 
   const as = tag ? tag : variant === 'subtitle' ? 'p' : variant === 'body' ? 'div' : variant;
-  console.log('variant:', variant);
 
   const mTop =
     variant === 'body' || marginTop === 0
@@ -64,8 +63,6 @@ const Text: React.FC<IProps> = (props) => {
       : marginTop
       ? marginTop / CONFIG.FONT_SIZE
       : (+fontSize[variant] * CONFIG.MARGIN.TOP).toFixed(1);
-
-  console.log('mTop:', mTop);
 
   const mBottom =
     variant === 'body' || marginBottom === 0
