@@ -83,7 +83,6 @@ const config = {
   mode,
   entry: { main: ['@babel/polyfill', './index.tsx'] },
   output: {
-    publicPath: '/',
     filename: getFileName('js'),
     path: path.resolve(__dirname, 'dist'),
   },

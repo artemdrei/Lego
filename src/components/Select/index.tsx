@@ -49,7 +49,6 @@ const SelectStyled = s.select`{
   background-position: right 8px top 58%;
   background-repeat: no-repeat;
   background-size: 16px;
-  @include arrow();
 
   &:focus:enabled {
     box-shadow: 0 0 0 0.2rem var(--outline);

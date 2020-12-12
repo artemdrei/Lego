@@ -1,5 +1,5 @@
 {
-  "name": "react-ts-boilerplate",
+  "name": "react-lego",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,7 +11,9 @@
     "test": "jest",
     "test:watch": "jest --watch --verbose false",
     "stats": "webpack --json > stats.json && webpack-bundle-analyzer stats.json",
-    "svg:optimize": "find ./src/assets/svg -type f -name '*.svg' -print0 | xargs -0 -n 1 -P 6 svgo"
+    "svg:optimize": "find ./src/assets/svg -type f -name '*.svg' -print0 | xargs -0 -n 1 -P 6 svgo",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "browserslist": "> 1%, ie >= 11, not dead",
   "repository": {
@@ -21,9 +23,9 @@
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/artemdrei/Webpack/issues"
+    "url": "https://github.com/artemdrei/Lego/issues"
   },
-  "homepage": "https://github.com/artemdrei/Webpack#readme",
+  "homepage": "https://artemdrei.github.io/Lego/",
   "devDependencies": {
     "@babel/core": "^7.12.9",
     "@babel/plugin-proposal-class-properties": "^7.12.1",
@@ -46,6 +48,7 @@
     "eslint": "^7.15.0",
     "eslint-plugin-no-loops": "^0.3.0",
     "file-loader": "^6.2.0",
+    "gh-pages": "^3.1.0",
     "html-webpack-plugin": "^4.2.0",
     "mini-css-extract-plugin": "^1.3.2",
     "node-sass": "^4.13.1",
