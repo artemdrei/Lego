@@ -1,7 +1,7 @@
 {
   "name": "react-lego",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.0.1",
+  "description": "React components",
   "main": "index.js",
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack-dev-server --mode development --watch",
@@ -18,7 +18,7 @@
   "browserslist": "> 1%, ie >= 11, not dead",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/artemdrei/Webpack.git"
+    "url": "git+https://github.com/artemdrei/Lego.git"
   },
   "author": "",
   "license": "ISC",
