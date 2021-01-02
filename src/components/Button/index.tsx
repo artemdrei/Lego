@@ -44,6 +44,7 @@ const base = `
   text-decoration: none;
   border-radius: 4px;
   text-align: center;
+  font-weight: 600;
 
   svg {
     width: 1rem;
