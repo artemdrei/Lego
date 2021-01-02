@@ -28,7 +28,7 @@ const InputStyled = s.input<Partial<IProps>>`
   }
 
   &::placeholder {
-    color: var(--font-weak) * 5% darker;
+    color: var(--form-control-font-placeholder);
     font-size: .9rem;
   }
 `;

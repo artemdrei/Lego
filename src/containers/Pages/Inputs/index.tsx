@@ -1,10 +1,17 @@
 import React, { useState } from 'react';
+import s from 'styled-components';
 
 import Container from '@root/containers/Helpers/Container';
 import Card from '@root/containers/Helpers/Card';
 
 import Text from '@root/components/Typography';
 import Input from '@root/components/Input';
+
+const WrapperStyled = s.div`
+  input {
+    margin-right: 16px;
+  }
+`;
 
 const Checkboxes: React.FC = () => {
   const [value, changeValue] = useState<{ [key: string]: string }>({});
@@ -14,7 +21,7 @@ const Checkboxes: React.FC = () => {
   };
 
   return (
-    <>
+    <WrapperStyled>
       <Container>
         <Text tag="h1" variant="h2">
           Select
@@ -28,7 +35,7 @@ const Checkboxes: React.FC = () => {
           <Input name="two" autoFocus value={value['two'] || ''} onChange={handleChange} />
         </Card>
       </Container>
-    </>
+    </WrapperStyled>
   );
 };
 
