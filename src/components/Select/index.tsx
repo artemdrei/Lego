@@ -51,7 +51,7 @@ const SelectStyled = s.select`{
   background-size: 16px;
 
   &:focus:enabled {
-    box-shadow: 0 0 0 0.2rem var(--outline);
+    box-shadow: var(--outline);
   }
 
   :disabled {

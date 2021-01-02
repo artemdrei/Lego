@@ -17,7 +17,7 @@ const InputStyled = s.input<Partial<IProps>>`
   }
 
   &:focus {
-    box-shadow: 0 0 0 2px var(--outline);
+    box-shadow: (--outline);
     outline: none;
   }
 

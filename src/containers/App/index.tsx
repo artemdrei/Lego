@@ -41,6 +41,7 @@ const App: React.FC = () => {
           <Route path={ROUTE.ALERTS} component={Alerts} />
           <Route path={ROUTE.LOADERS} component={Loaders} />
           <Route path={ROUTE.INPUTS} component={Inputs} />
+          <Redirect to={ROUTE.BUTTONS} />
         </Switch>
       </ContentStyled>
     </AppStyled>

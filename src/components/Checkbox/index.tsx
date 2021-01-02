@@ -49,7 +49,7 @@ const Input = styled.input<IProps>`
 
     &:active,
     &:focus {
-      box-shadow: 0 0 0 2px var(--outline);
+      box-shadow: var(--outline);
     }
 
     & + span {

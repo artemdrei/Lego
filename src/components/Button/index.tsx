@@ -62,7 +62,7 @@ const getColor = ({ color = 'primary', variant = 'regular', size = 'medium' }: I
     transition: color, background-color, border-color, box-shadow 100ms ease-in-out;
 
     &:focus:enabled {
-      box-shadow: 0 0 0 3px var(--outline);
+      box-shadow: var(--outline);
     }
 
     &:disabled {
